@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="img/icon.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="wrapper">
+	<div class="container">
+		<h1>Welcome</h1>	
+		<form class="form" method="post">
+			<input type="text" placeholder="Username" id="email_field">
+			<input type="password" placeholder="Password" id="password_field">
+			<button onclick="login()">Login</button>
+		</form>
+	</div>
+	
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyCGMziWzVej0cl-p2UxxTVUcwk3gZ8jYpA",
+			authDomain: "mylilshopf.firebaseapp.com",
+			databaseURL: "https://mylilshopf.firebaseio.com",
+			projectId: "mylilshopf",
+			storageBucket: "mylilshopf.appspot.com",
+			messagingSenderId: "28816905891"
+		};
+		firebase.initializeApp(config);
+	</script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
