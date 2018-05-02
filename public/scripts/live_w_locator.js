@@ -129,7 +129,7 @@ $(function() {
                 $ul = $("#result_strip ul.collector");
 
             results.forEach(function(result) {
-                var $li = $('<li><div class="caption"><h4 class="code"></h4></div></div></li>');
+                var $li = $('<div class="caption"><h4 class="code"></h4></div></div>');
 
                 $li.find("h4.code").html(result.codeResult.code + " (" + result.codeResult.format + ")");
                 $ul.prepend($li);
