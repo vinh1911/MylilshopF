@@ -124,6 +124,7 @@ $(function() {
                 self.setState(state, value);
             });
         },
+<<<<<<< HEAD
         _printCollectedResults: function() {
             var results = resultCollector.getResults(),
                 $ul = $("#result_strip ul.collector");
@@ -135,6 +136,8 @@ $(function() {
                 $ul.prepend($li);
             });
         },
+=======
+>>>>>>> 99045e9782ac70efb586acb04ccad0552516f731
         _accessByPath: function(obj, path, val) {
             var parts = path.split('.'),
                 depth = parts.length,
@@ -281,15 +284,10 @@ $(function() {
 
     Quagga.onDetected(function(result) {
         var code = result.codeResult.code;
-
+		document.getElementsByName('output')[0].value=code;
         if (App.lastResult !== code) {
             App.lastResult = code;
-            var $node = null, canvas = Quagga.canvas.dom.image;
-
-            $node = $('<li><div class="caption"><h4 class="code"></h4></div></div></li>');
             
-            $node.find("h4.code").html(code);
-            $("#result_strip ul.thumbnails").prepend($node);
         }
     });
 

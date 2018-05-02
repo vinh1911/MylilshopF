@@ -1,32 +1,28 @@
-[debug] [2018-05-01T16:26:20.740Z] ----------------------------------------------------------------------
-[debug] [2018-05-01T16:26:20.742Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-05-01T16:26:20.742Z] CLI Version:   3.18.4
-[debug] [2018-05-01T16:26:20.742Z] Platform:      win32
-[debug] [2018-05-01T16:26:20.742Z] Node Version:  v8.11.1
-[debug] [2018-05-01T16:26:20.743Z] Time:          Tue May 01 2018 23:26:20 GMT+0700 (SE Asia Standard Time)
-[debug] [2018-05-01T16:26:20.743Z] ----------------------------------------------------------------------
+[debug] [2018-05-02T04:27:49.280Z] ----------------------------------------------------------------------
+[debug] [2018-05-02T04:27:49.282Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-05-02T04:27:49.282Z] CLI Version:   3.18.4
+[debug] [2018-05-02T04:27:49.282Z] Platform:      win32
+[debug] [2018-05-02T04:27:49.282Z] Node Version:  v8.11.1
+[debug] [2018-05-02T04:27:49.283Z] Time:          Wed May 02 2018 11:27:49 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-02T04:27:49.283Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-05-01T16:26:20.754Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-05-01T16:26:20.755Z] > authorizing via signed-in user
-[debug] [2018-05-01T16:26:20.757Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mylilshopf  
+[debug] [2018-05-02T04:27:49.296Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-02T04:27:49.297Z] > authorizing via signed-in user
+[debug] [2018-05-02T04:27:49.300Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mylilshopf  
   
- Tue May 01 2018 23:26:20 GMT+0700 (SE Asia Standard Time)
-[debug] [2018-05-01T16:26:21.794Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-01T16:26:21.795Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mylilshopf/tokens  
+ Wed May 02 2018 11:27:49 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-02T04:27:50.282Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-02T04:27:50.283Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mylilshopf/tokens  
   
- Tue May 01 2018 23:26:21 GMT+0700 (SE Asia Standard Time)
-[debug] [2018-05-01T16:26:22.654Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-01T16:26:22.654Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mylilshopf  
-  
- Tue May 01 2018 23:26:22 GMT+0700 (SE Asia Standard Time)
-[debug] [2018-05-01T16:26:23.787Z] <<< HTTP RESPONSE 200
+ Wed May 02 2018 11:27:50 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-02T04:27:51.119Z] <<< HTTP RESPONSE 200
 [info] 
-[info] === Serving from 'C:\Users\Admin\Desktop\MylilshopF'...
+[info] === Deploying to 'mylilshopf'...
 [info] 
-[debug] [2018-05-01T16:26:23.789Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/28816905891/clients/_:getWebAppConfig  
+[info] i  deploying hosting
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-05-02T04:27:53.243Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/mylilshopf/uploads/-LBU5oalzt0mwYA7Sy5G?fileCount=19&message=  
   
- Tue May 01 2018 23:26:23 GMT+0700 (SE Asia Standard Time)
-[debug] [2018-05-01T16:26:24.543Z] <<< HTTP RESPONSE 200
-[info] i  hosting: Serving hosting files from: public
-[info] +  hosting: Local server: http://localhost:5000
-
+ Wed May 02 2018 11:27:53 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-02T04:28:10.441Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-02T04:28:10.441Z] [hosting] .tgz uploaded successfully, waiting for extraction

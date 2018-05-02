@@ -1,9 +1,8 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700|Cabin+Condensed:400,600");
 
 body {
   background-color: #FFF;
-  margin: 0px;
   font-family: Ubuntu, sans-serif;
   color: #1e1e1e;
   font-weight: normal;
@@ -21,11 +20,19 @@ ul li{
     list-style: none;
 }
 .menu{
+<<<<<<< HEAD
     width: 100%;
     margin: 0;
+=======
+    width: 200%;
+    margin: 0 auto;
+>>>>>>> 99045e9782ac70efb586acb04ccad0552516f731
     background: #293a4a;
     float: left;
     height: 40px;
+    padding-top: -10px;
+    margin-left: -10px;
+    margin-top: -10px;
 }
 .menu > ul > li{
     float: left;
@@ -59,12 +66,6 @@ ul li{
     display: block;
 }
 
-#container {
-  width: 640px;
-  margin: 20px auto;
-  padding: 10px;
-}
-
 #interactive.viewport {
   width: 0px;
   height: 0px;
@@ -80,27 +81,27 @@ ul li{
 #interactive.viewport canvas.drawingBuffer, video.drawingBuffer {
   margin-left: -0px;
 }
-.content{
- width: 30%;
- float: left;;
- background: #FFf;
- height: 600px;
- padding: 10px;
- overflow: hidden; 
- border: 2px solid #808080;
- box-shadow: 5px 5px 5px;
- border-radius: 7px;
- margin-top: 20px;
- margin-left: 20px;
+
+.barcode{
+    overflow: hidden;
+    width: 60%;
+    height: 15px;
+    float: left;
+    background: #fff;
+    padding: 10px;
+    margin-left: 15px;
 }
 .referencenote{
     overflow: hidden;
     width: 60%;
     height: 15px;
-    float: right;
+    float: left;
+    margin-top: -5px;
     background: #fff;
+    margin-top: 5px;
+    margin-left: 15px;
     padding: 10px;
-    margin-top: 20px;
+
 }
 
 .sidebar{
@@ -108,15 +109,27 @@ ul li{
  width: 60%;
  height: 510px;
  background: #fff;
- float: right;
+ float: left;
  padding: 10px;
+ border: 2px solid #808080;
+ box-shadow: 5px 5px 5px;
+ border-radius: 7px;
+ margin-top: 20px;
+ margin-left: 20px;
+}
+.content{
+ width: 30%;
+ float: right;
+ background: #FFf;
+ height: 510px;
+ padding: 10px;
+ overflow: hidden; 
  border: 2px solid #808080;
  box-shadow: 5px 5px 5px;
  border-radius: 7px;
  margin-top: 20px;
  margin-right: 20px;
 }
-
 .controls fieldset {
   border: none;
   margin: 0;
@@ -153,10 +166,12 @@ ul li{
 
 
 #result_strip {
-  margin: 10px 0;
-  border-top: 1px solid #EEE;
-  border-bottom: 1px solid #EEE;
-  padding: 10px 0;
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 175px;
+  height: 40px;
+  border: 0.25px solid #000;
+ 
 }
 
 #result_strip > ul {
