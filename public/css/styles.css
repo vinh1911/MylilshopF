@@ -500,3 +500,9 @@ h1{
 .loginbox a:hover{
 	color: #ffc107;
 }
+/*Header*/
+.includedContent{
+    width: 100%;
+    margin:0;
+    padding: 0;
+}
