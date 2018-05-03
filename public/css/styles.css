@@ -394,16 +394,18 @@ float:right;
  
 .table#cart thead {
 display: none;
+
 } 
  
 .table#cart tbody td {
 display: block;
 padding: .6rem;
 min-width:320px;
+color: #293a4a;
 } 
  
 .table#cart tbody tr td:first-child {
-background: #333;
+background: #293a4a;
 color: #fff;
 } 
  
@@ -420,7 +422,12 @@ display:block;
 .table#cart tfoot td .btn {
 display:block;
 }
+.th{
+    background-color: #4CAF50;
+    color: white;
 }
+}
+
 /*Login box*/
 .loginbox{
 	width: 320px;
