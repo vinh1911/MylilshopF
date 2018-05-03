@@ -19,42 +19,41 @@ ul{
 ul li{
     list-style: none;
 }
+
 .menu{
-<<<<<<< HEAD
-    width: 100%;
+
+    width: 102%;
     margin: 0;
-=======
-    width: 200%;
-    margin: 0 auto;
->>>>>>> 99045e9782ac70efb586acb04ccad0552516f731
-    background: #293a4a;
+
+
+    background: #50a3a2;
     float: left;
     height: 40px;
     padding-top: -10px;
     margin-left: -10px;
     margin-top: -10px;
 }
-.menu > ul > li{
+.menu  ul  li{
     float: left;
     position: relative;
 }
-.menu > ul > li > a{
+.menu  ul  li  a{
     text-decoration: none;
     color:#fff ;
     line-height: 40px;
     display: block;
     padding : 0 20px 0 20px;
 }
-.menu > ul > li > a:hover{
+.menu  ul  li  a:hover{
     background: red;
 }
-.menu > ul > li > ul{
-    background: #293a4a;
+.menu  ul  li  ul{
+    background: #50a3a2;
     width: 250px;
     display: none;
     position: absolute;
 }
-.menu > ul > li ul a{
+.menu  ul  li ul a{
     display: block;
     line-height: 40px;
     color: #fff;
@@ -62,8 +61,12 @@ ul li{
     border-bottom: 1px solid #ddd;
     text-indent: 15px;
 }
-.menu > ul > li:hover ul{
+.menu  ul  li:hover ul{
     display: block;
+}
+.top-right-corner{
+    float: right;
+    margin-right: 20px;
 }
 
 #interactive.viewport {
@@ -391,16 +394,18 @@ float:right;
  
 .table#cart thead {
 display: none;
+
 } 
  
 .table#cart tbody td {
 display: block;
 padding: .6rem;
 min-width:320px;
+color: #293a4a;
 } 
  
 .table#cart tbody tr td:first-child {
-background: #333;
+background: #293a4a;
 color: #fff;
 } 
  
@@ -417,7 +422,12 @@ display:block;
 .table#cart tfoot td .btn {
 display:block;
 }
+.th{
+    background-color: #4CAF50;
+    color: white;
 }
+}
+
 /*Login box*/
 .loginbox{
 	width: 320px;

@@ -124,20 +124,7 @@ $(function() {
                 self.setState(state, value);
             });
         },
-<<<<<<< HEAD
-        _printCollectedResults: function() {
-            var results = resultCollector.getResults(),
-                $ul = $("#result_strip ul.collector");
 
-            results.forEach(function(result) {
-                var $li = $('<div class="caption"><h4 class="code"></h4></div></div>');
-
-                $li.find("h4.code").html(result.codeResult.code + " (" + result.codeResult.format + ")");
-                $ul.prepend($li);
-            });
-        },
-=======
->>>>>>> 99045e9782ac70efb586acb04ccad0552516f731
         _accessByPath: function(obj, path, val) {
             var parts = path.split('.'),
                 depth = parts.length,
