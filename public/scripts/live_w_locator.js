@@ -1,26 +1,4 @@
 $(function() {
-    var resultCollector = Quagga.ResultCollector.create({
-        capture: true,
-        capacity: 20,
-        blacklist: [{
-            code: "WIWV8ETQZ1", format: "code_93"
-        }, {
-            code: "EH3C-%GU23RK3", format: "code_93"
-        }, {
-            code: "O308SIHQOXN5SA/PJ", format: "code_93"
-        }, {
-            code: "DG7Q$TV8JQ/EN", format: "code_93"
-        }, {
-            code: "VOFD1DB5A.1F6QU", format: "code_93"
-        }, {
-            code: "4SO64P4X8 U4YUU1T-", format: "code_93"
-        }],
-        filter: function(codeResult) {
-            // only store results which match this constraint
-            // e.g.: codeResult
-            return true;
-        }
-    });
     var App = {
         init: function() {
             var self = this;
