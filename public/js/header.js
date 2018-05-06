@@ -1,17 +1,4 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<link rel="icon" type="image/png" sizes="16x16" href="img/icon.png">
-    <title>List product</title>
-
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no" />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-    <script>
-        function includeHTML() {
+function includeHTML() {
         var z, i, elmnt, file, xhttp;
         /*loop through a collection of all HTML elements:*/
         z = document.getElementsByTagName("*");
@@ -38,14 +25,4 @@
     }
   }
 };
-    </script>
-</head>
 
-<body>
-    <div head-html="header.html"></div>
-    <script>
-        includeHTML();
-    </script>
-	<script src="js/index.js"></script>
-</body>
-</html>

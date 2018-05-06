@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="icon" type="image/png" sizes="16x16" href="img/icon.png">
+    <title>List product</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script src="js/header.js"></script>
+</head>
+
+<body>
+
+    <div head-html="header.html"></div>
+	<div>
+		<div><lable>Code</lable></div>
+        <input type="text" id="itemCode"/>
+    </div>
+	<div>
+		<div><lable>Name</lable></div>
+        <input type="text" id="itemName"/>
+    </div>
+	<div>
+		<div><lable>Quantity</lable></div>
+        <input type="text" id="itemQuantity"/>
+    </div>
+	<div>
+		<div><lable>Price</lable></div>
+        <input type="text" id="itemPrice"/>
+    </div>
+	<div>
+	<button type="button" onclick="submitClick()">Add Product</button>
+	</div>
+	<script>
+        includeHTML();
+     </script>
+	 	<script src="js/index.js"></script>
+</body>
+
+</html>

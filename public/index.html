@@ -6,39 +6,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/icon.png">
     <title>Home</title>
 
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /*loop through a collection of all HTML elements:*/
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute("head-html");
-        if (file) {
-        /*make an HTTP request using the attribute value as the file name:*/
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("head-html");
-          includeHTML();
-        }
-      }
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script>
 	 <script src="js/index.js"></script>
+	 <script src="js/header.js"></script>
   </head>
 
   <body>
@@ -49,7 +22,7 @@
     </section>
 
 	<div class="barcode">
-        <input type="textbox" name="output" placeholder="Enter barcode, or scan" />
+        <input type="text" name="output" placeholder="Enter barcode, or scan" />
     </div>
     <div class="referencenote">
         <input type="text" placeholder="Enter Reference Note" />
