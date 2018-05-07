@@ -58,13 +58,26 @@ invRef.on("child_added", snap => {
 	var quantity = snap.child("Quantity").val();
 	$("#table_body").append("<tr><td>" + code + "</td><td>" + name + "</td><td>" + cost +"</td><td>"+price+"</td><td>"+quantity+"</td><tr>");
 });
-
+var sum = 0;
 function bcsubmit() {
-  var key = document.getElementsByName('barcode')[0].value;
-  console.log(key);
+  var key = document.getElementById('barcode').value;
+  var quantityStr = document.getElementById('quantitys').value;
+
   invRef.child(key).on("value", snap => {
     var name = snap.child("Name").val();
     var price = snap.child("Price").val();
-    $("#bill_body").append("<tr><td>" + name + "</td><td>"+price+"</td><td></td><td></td><tr>");
+	var subtotal = price*quantityStr;
+	sum = sum + subtotal;
+    $("#bill").append("<tr><td>" + name + "</td><td>"+price+"</td><td>"+ quantityStr +"</td><td>"+subtotal+"</td><td><button type='button' id="+key+" value="+subtotal+">D</button></tr>");
+	document.getElementById('total').innerHTML = sum;
 });
+}
+
+function deleteFun(){
+	var x = document.getElementById("bill").rows.length;
+    for (i=1;i<x;i++){
+        document.getElementById("bill").deleteRow(1);
+    }
+	sum=0;
+	document.getElementById('total').innerHTML = sum;
 }

@@ -97,7 +97,7 @@ $(function() {
 
     Quagga.onDetected(function(result) {
         var code = result.codeResult.code;
-		document.getElementsByName('barcode')[0].value=code;
+		document.getElementById('barcode').value=code;
         if (App.lastResult !== code) {
             App.lastResult = code;
         }
