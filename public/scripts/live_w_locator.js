@@ -8,7 +8,7 @@ $(function() {
                     return self.handleError(err);
                 }
                 //Quagga.registerResultCollector(resultCollector);
-                App.attachListeners();
+              
                 App.checkCapabilities();
                 Quagga.start();
             });
@@ -64,21 +64,7 @@ $(function() {
                 });
             });
         },
-        attachListeners: function() {
-            var self = this;
-
-            
-            $(".controls .reader-config-group").on("change", "input, select", function(e) {
-                e.preventDefault();
-                var $target = $(e.target),
-                    value = $target.attr("type") === "checkbox" ? $target.prop("checked") : $target.val(),
-                    name = $target.attr("name"),
-                    state = self._convertNameToState(name);
-
-                console.log("Value of "+ state + " changed to " + value);
-                self.setState(state, value);
-            });
-        },
+        
        
         state: {
             inputStream: {
