@@ -32,6 +32,7 @@ var itemName = document.getElementById("itemName");
 var itemQuantity = document.getElementById("itemQuantity");
 var itemPrice = document.getElementById("itemPrice");
 var itemCost = document.getElementById("itemCost");
+
 function submitClick() {
 	var iCode = itemCode.value;
 	var iName = itemName.value;
@@ -46,7 +47,6 @@ function submitClick() {
 	Quantity: iQuantity
   });
 }
-
 // Display products
 var invRef = rootRef.ref().child("Inventory");
 
@@ -56,6 +56,15 @@ invRef.on("child_added", snap => {
 	var price = snap.child("Price").val();
 	var cost = snap.child("Cost").val();
 	var quantity = snap.child("Quantity").val();
-
 	$("#table_body").append("<tr><td>" + code + "</td><td>" + name + "</td><td>" + cost +"</td><td>"+price+"</td><td>"+quantity+"</td><tr>");
 });
+
+function bcsubmit() {
+  var key = document.getElementsByName('barcode')[0].value;
+  console.log(key);
+  invRef.child(key).on("value", snap => {
+    var name = snap.child("Name").val();
+    var price = snap.child("Price").val();
+    $("#bill_body").append("<tr><td>" + name + "</td><td>"+price+"</td><td></td><td></td><tr>");
+});
+}

@@ -8,7 +8,7 @@ $(function() {
                     return self.handleError(err);
                 }
                 //Quagga.registerResultCollector(resultCollector);
-              
+
                 App.checkCapabilities();
                 Quagga.start();
             });
@@ -64,8 +64,8 @@ $(function() {
                 });
             });
         },
-        
-       
+
+
         state: {
             inputStream: {
                 type : "LiveStream",
@@ -100,7 +100,6 @@ $(function() {
 		document.getElementsByName('barcode')[0].value=code;
         if (App.lastResult !== code) {
             App.lastResult = code;
-            
         }
     });
 

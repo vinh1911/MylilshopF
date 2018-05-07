@@ -20,13 +20,13 @@
     <!--end of Navigation bar-->
     <!--User Addition-->
     <br />
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
                 <form>
                     <div class="form-group">
-                        <label for="text">Username:</label>
-                        <input type="text" class="form-control" id="text" placeholder="Enter username" name="text">
+                        <label for="text">Name:</label>
+                        <input type="text" class="form-control" id="text" placeholder="Enter name" name="text">
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
@@ -36,13 +36,13 @@
                         <label for="text">Password</label>
                         <input type="password" class="form-control" id="text" placeholder="Enter password" name="password">
                     </div>
-                    <div>
-                        <select bgcolor="efefef">
-                            <option value="volvo">Employee</option>
-                            <option value="saab">Manager</option>
-                        </select>
+                    <div class="form-group">
+                          <select class="form-control" id="role">
+                              <option value="0">Employee</option>
+                              <option value="1">Manager</option>
+                          </select>
                     </div>
-                    <br />
+                    <br>
                     <div>
                         <button type="button" class="btn btn-success" onclick="submitClick()">Add user</button>
                     </div>
@@ -52,7 +52,7 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">Username</th>
+                            <th scope="col">Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Role</th>
                         </tr>
