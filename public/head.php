@@ -1,7 +1,8 @@
-﻿ <div class="menu">
-    <div class="top-left-corner">
-		<ul>
-                <li><a href="index.html">Home</a></li>
+
+    <div class="menu">
+        <div class="top-left-corner">
+            <ul>
+                <li><a href="">Home</a></li>
                 <li>
                     <a href="">Product Management</a>
                     <ul>
@@ -25,5 +26,7 @@
             <ul>
                 <li><a href="#" onclick="logout();event.preventDefault();">Logout</a></li>
             </ul>
+
         </div>
-</div>
+
+    </div>
