@@ -1,0 +1,23 @@
+﻿
+
+#interactive.viewport {
+  width: 0px;
+  height: 0px;
+}
+
+
+#interactive.viewport canvas, video {
+  float: left;
+  width: 0px;
+  height: 0px;
+}
+
+#interactive.viewport canvas.drawingBuffer, video.drawingBuffer {
+  margin-left: -0px;
+}
+
+
+
+
+
+ 

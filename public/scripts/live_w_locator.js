@@ -67,13 +67,7 @@ $(function() {
         attachListeners: function() {
             var self = this;
 
-            self.initCameraSelection();
-            $(".controls").on("click", "button.stop", function(e) {
-                e.preventDefault();
-                Quagga.stop();
-                self._printCollectedResults();
-            });
-
+            
             $(".controls .reader-config-group").on("change", "input, select", function(e) {
                 e.preventDefault();
                 var $target = $(e.target),
@@ -85,17 +79,7 @@ $(function() {
                 self.setState(state, value);
             });
         },
-        applySetting: function(setting, value) {
-            var track = Quagga.CameraAccess.getActiveTrack();
-            if (track && typeof track.getCapabilities === 'function') {
-                switch (setting) {
-                case 'zoom':
-                    return track.applyConstraints({advanced: [{zoom: parseFloat(value)}]});
-                case 'torch':
-                    return track.applyConstraints({advanced: [{torch: !!value}]});
-                }
-            }
-        },
+       
         state: {
             inputStream: {
                 type : "LiveStream",
@@ -127,7 +111,7 @@ $(function() {
 
     Quagga.onDetected(function(result) {
         var code = result.codeResult.code;
-		document.getElementsByName('output')[0].value=code;
+		document.getElementsByName('barcode')[0].value=code;
         if (App.lastResult !== code) {
             App.lastResult = code;
             
