@@ -57,13 +57,6 @@ function logoutClick(){
   firebase.auth().signOut();
 }
 
-function usercheck(){
-  var user = firebase.auth().currentUser;
-  console.log(user.displayName);
-  console.log(user.email);
-  console.log(user.uid);
-}
-
 
 // Add products
 

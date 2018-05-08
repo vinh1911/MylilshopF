@@ -10,63 +10,67 @@
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 </head>
 <body>
-    <!--Navigation bar-->
-    <div id="nav-placeholder"></div>
-    <script>
-    $(function(){
-      $("#nav-placeholder").load("header.html");
-    });
-    </script>
-    <!--end of Navigation bar-->
-    <!--User Addition-->
-    <br />
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4">
-                <form>
-                    <div class="form-group">
-                        <label for="text">Name:</label>
-                        <input type="text" class="form-control" id="name_field" placeholder="Enter name">
-                    </div>
-                    <div class="form-group">
-                        <label for="text">Work at: </label>
-                        <input type="text" class="form-control" id="shop_field" placeholder="Enter Shop ID">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email_field" placeholder="Enter email">
-                    </div>
-                    <div class="form-group">
-                        <label for="text">Password</label>
-                        <input type="password" class="form-control" id="password_field" placeholder="Enter password">
-                    </div>
-                    <div class="form-group">
-                          <select class="form-control" id="role_field">
-                              <option value="Employee">Employee</option>
-                              <option value="Manager">Manager</option>
-                          </select>
-                    </div>
-                    <br>
-                    <div>
-                        <button type="button" class="btn btn-success" onclick="createUser()">Add user</button>
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-8">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Shop ID</th>
-                            <th scope="col">Role</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
+<!--Navigation bar-->
+<div id="nav-placeholder"></div>
+<script>
+$(function(){
+  $("#nav-placeholder").load("header.html");
+});
+</script>
+<!--end of Navigation bar-->
+<!--User Addition-->
+<br />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <form>
+                <div class="form-row pb-2">
+                  <div class="col-md-8">
+                    <label for="text">Name</label>
+                    <input type="text" class="form-control" id="name_field" placeholder="Enter name">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="text">Role</label>
+                    <select class="form-control" id="role_field">
+                        <option value="Employee">Employee</option>
+                        <option value="Manager">Manager</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="text">Work at </label>
+                    <input type="text" class="form-control" id="shop_field" placeholder="Enter Shop ID">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email_field" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="text">Password</label>
+                    <input type="password" class="form-control" id="password_field" placeholder="Enter password">
+                </div>
+                <div>
+                    <button type="button" class="btn btn-success" onclick="createUser()">Add user</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-8">
+          <br>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Shop ID</th>
+                        <th scope="col">Role</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
         </div>
     </div>
+</div>
 <script src="js/index.js"></script>
 </body>
 </html>
