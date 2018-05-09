@@ -84,12 +84,12 @@ var sum = 0;
 var row=0;
 function bcsubmit() {
   var key = document.getElementById('barcode').value;
-  var quantityStr = document.getElementById('quantitys').value;
+  var quantityStr = parseInt(document.getElementById('quantitys').value);
   var iShop = document.getElementById("ShopID").value;
 invRef.child(key).on("value", snap => {
     var name = snap.child("Name").val();
     var price = snap.child("Price").val();
-	var quantityxx = snap.child("Shop").child(iShop).val();
+	var quantityxx = parseInt(snap.child("Shop").child(iShop).val());
 	if (quantityxx >= quantityStr){
 		var subtotal = price*quantityStr;
 		sum = sum + subtotal;
