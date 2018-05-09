@@ -16,9 +16,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       var currentRole = snap.child("Role").val();
       console.log(currentRole);
       if (currentRole == "Manager"){}
-      else if (currentRole == "Employee"){
-        window.location.href = "home.html";
-      }
+      else { window.location.href = "home.html";}
     });
   }
   else { window.location.href = "login.html";}

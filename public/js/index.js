@@ -46,7 +46,13 @@ function createUser(){
 }
 
 
-
+function createShop(){
+  var shopId = document.getElementById("shop_field").value;
+  var shopAddress = document.getElementById("address_field").value;
+  var root = firebase.database().ref();
+  var shopRef = firebase.database().ref().child("Shops");
+  shopRef.child(shopId).set(shopAddress);
+}
 // Add products
 
 
