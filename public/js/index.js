@@ -91,31 +91,37 @@ invRef.child(key).on("value", snap => {
     var price = parseInt(snap.child("Price").val());
 	var quantityxx = parseInt(snap.child("Shop").child(iShop).val());
 	var i,code,count=0;	
-	if (quantityxx >= quantityStr){
-		for (i=1 ; i <= row ; i++){
-			code = document.getElementById("bill-"+i+"").getAttribute("name");
-			if (code===key){
-				count = i;
-			}
+	for (i=1 ; i <= row ; i++){
+		code = document.getElementById("bill-"+i+"").getAttribute("name");
+		if (code===key){
+			count = i;
 		}
-		if (count == 0)	
+	}
+	if (count == 0)	
+	{
+		if(quantityxx >= quantityStr) 
 		{
 			var subtotal = price*quantityStr;
 			row++;
 			$("#bill").append("<tr name="+key+" id=bill-"+row+"><td>" + name + "</td><td>"+price+"</td><td>"+ quantityStr +"</td><td>"+subtotal+"</td><td><button type='button' class='btn btn-primary btn-sm' onclick='deleteRow("+row+");'>x</button></tr>");
-
-		} else {
-			var oldquantity = parseInt($("#bill tr:eq("+count+") td:eq("+2+")").html());
-			quantityStr = quantityStr + oldquantity;
+		}else{
+			alert("Error! Out of stock!");
+		}
+	} else {
+		var oldquantity = parseInt($("#bill tr:eq("+count+") td:eq("+2+")").html());
+		quantityStr = quantityStr + oldquantity;
+		if(quantityxx >= quantityStr)
+		{
 			var subtotal = price*quantityStr;
 			var output = parseInt($("#bill tr:eq("+count+") td:eq("+3+")").html());
 			deleteRow(count);
 			row++;
 			$('#bill > thead > tr').eq(count-1).after("<tr name="+key+" id=bill-"+count+"><td>" + name + "</td><td>"+price+"</td><td>"+ quantityStr +"</td><td>"+subtotal+"</td><td><button type='button' class='btn btn-primary btn-sm' onclick='deleteRow("+row+");'>x</button></tr>");
-		}
-	}else{
-		alert("Error! Out of stock!");
+		}else{
+			alert("Error! Out of stock!");
+		}			
 	}
+
 });
 }
 
