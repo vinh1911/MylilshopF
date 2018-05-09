@@ -86,26 +86,56 @@ function submitClick() {
 }
 // Display products
 
-
+var items;
 var sum = 0;
 var row=0;
 function bcsubmit() {
   var key = document.getElementById('barcode').value;
   var quantityStr = document.getElementById('quantitys').value;
-
+  var iShop = document.getElementById("ShopID").value;
 invRef.child(key).on("value", snap => {
     var name = snap.child("Name").val();
     var price = snap.child("Price").val();
-	var subtotal = price*quantityStr;
-	sum = sum + subtotal;
-  row++;
-    $("#bill").append("<tr id=bill-"+row+"><td>" + name + "</td><td>"+price+"</td><td>"+ quantityStr +"</td><td>"+subtotal+"</td><td><button type='button' class='btn btn-primary btn-sm' onclick='deleteRow("+row+");'>x</button></tr>");
-	document.getElementById('total').innerHTML = sum;
+	var quantityxx = snap.child("Shop").child(iShop).val();
+	if (quantityxx >= quantityStr){
+		var subtotal = price*quantityStr;
+		sum = sum + subtotal;
+		row++;
+		$("#bill").append("<tr name="+key+" id=bill-"+row+"><td>" + name + "</td><td>"+price+"</td><td>"+ quantityStr +"</td><td>"+subtotal+"</td><td><button type='button' class='btn btn-primary btn-sm' onclick='deleteRow("+row+");'>x</button></tr>");
+		document.getElementById('total').innerHTML = sum;
+	}else{
+		alert("Error! Out of stock!");
+	}
 });
 }
 
-function deleteRow(id){
-  $('#bill-'+id).remove();
+function deleteRow(id){ 
+  var output = $("#bill tr:eq("+row+") td:eq("+3+")").html();
+  $('#bill-'+id).remove(); 
+  sum = sum - output;
+  document.getElementById('total').innerHTML = sum;
+  row--;
+}
+
+function commit(){
+	var i=1, j=2, code, name , subtotal, quantity;
+	var d = new Date();
+	var year = d.getFullYear();
+	var month = d.getMonth()+1;
+	var day = d.getDate();
+	console.log(day);
+	console.log(month);
+	console.log(year);
+
+	for (i = 1; i < row+1; i++)
+	{
+		code = document.getElementById("bill-"+i+"").getAttribute("name");
+		name = $("#bill tr:eq("+i+") td:eq("+0+")").html();
+		quantity = parseInt($("#bill tr:eq("+i+") td:eq("+2+")").html());
+		subtotal = parseInt($("#bill tr:eq("+i+") td:eq("+3+")").html());
+	}
+	items = row;
+	alert("The total amount : " + sum +" $"+"\nThe number of sold items: " + row);
 }
 
 function deleteFun(){
@@ -115,4 +145,6 @@ function deleteFun(){
     }
 	sum=0;
 	document.getElementById('total').innerHTML = sum;
+	row = 0;
+
 }
