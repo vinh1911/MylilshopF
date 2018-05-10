@@ -1,7 +1,7 @@
 var ShowRef = rootRef.ref().child("Transaction");
 function createReport() {
-  var from = ;
-  var to = ;
+  var from = document.getElementById("from_field").value;
+  var to = document.getElementById("to_field").value;
 	ShowRef.orderByChild("Time").startAt(parseInt(from)).endAt(parseInt(to)).once('value',gotItem)
 }
 //Get Item

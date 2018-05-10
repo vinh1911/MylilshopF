@@ -72,15 +72,12 @@ var invRef = rootRef.ref().child("Items");
 function submitClick() {
   var iCode = document.getElementById("barcode").value;
   var iName = document.getElementById("itemName").value;
-  var iQuantity = document.getElementById("itemQuantity").value;
   var iPrice = document.getElementById("itemPrice").value;
   var iCost = document.getElementById("itemCost").value;
-  var iShop = document.getElementById("ShopID").value;
 	invRef.child(iCode).update({
 	  Code: iCode,
     Name: iName,
   	Price: parseInt(iPrice),
   	Cost: parseInt(iCost)
   });
-  invRef.child(iCode).child("Shop").child(iShop).set(parseInt(iQuantity));
 }
