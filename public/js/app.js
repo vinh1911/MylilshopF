@@ -81,3 +81,7 @@ function submitClick() {
   	Cost: parseInt(iCost)
   });
 }
+function deleteClick() {
+  var iCode = document.getElementById("barcode").value;
+	invRef.child(iCode).remove();
+}

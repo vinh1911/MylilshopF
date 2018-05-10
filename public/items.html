@@ -47,7 +47,14 @@
           <input type="text" class="form-control" id="itemPrice">
         </div>
         <div>
-          <button type="submit" class="btn btn-success" onclick="submitClick()">Add product</button>
+          <table class="table table-borderless">
+        	  <thead>
+          		<tr>
+            		<th><button type="submit" class="btn btn-success" onclick="submitClick()">Create product</button>
+            		<th><button type="submit" class="btn btn-danger float-right" onclick="deleteClick()">Delete</button>
+          		</tr>
+        	  </thead>
+      	  </table>
         </div>
       </form>
     </div>
