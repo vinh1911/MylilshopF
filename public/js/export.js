@@ -6,7 +6,7 @@ function bcsubmit() {
   var key = document.getElementById('barcode').value;
   var quantityStr = parseInt(document.getElementById('quantitys').value);
   var iShop = document.getElementById("ShopID").value;
-invRef.child(key).on("value", snap => {
+invRef.child(key).once("value", snap => {
     var name = snap.child("Name").val();
     var price = parseInt(snap.child("Price").val());
 	var quantityxx = parseInt(snap.child("Shop").child(iShop).val());
@@ -76,11 +76,13 @@ function commit(){
     qLista.push(-quantity);
 		subtotal = parseInt($("#bill tr:eq("+i+") td:eq("+3+")").html());
     qListv.push(subtotal);
+		$('#modal_body').append("<tr><td>"+code+"</td><td>" + name + "</td><td>"+quantity+"</td><td>"+subtotal+"</td></tr>");
 		sum = sum + subtotal;
 	}
 	items = x-1;
   document.getElementById('total').innerHTML = sum;
-  alert("The total amount : " + sum +" $"+"\nThe number of sold items: " + items);
+   $('#modal_body').append("<tr><td>Total:</td><td>"+sum+"</td><td></td><td></td></tr>");
+
   var TransRef = rootRef.ref().child("Transaction");
   var qId=TransRef.push();
   qId.set({

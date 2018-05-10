@@ -72,7 +72,7 @@ function commit(){
 	items = x-1;
   document.getElementById('total').innerHTML = sum;
   $('#modal_body').append("<tr><td>Total:</td><td>"+sum+"</td><td></td><td></td></tr>");
-  //alert("The total amount : " + sum +" $"+"\nThe number of sold items: " + items);
+ 
   var TransRef = rootRef.ref().child("Transaction");
   var qId=TransRef.push();
   qId.set({
