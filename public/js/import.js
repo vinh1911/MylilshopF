@@ -1,8 +1,12 @@
-// Display products
+//The process of adding new bought products into the database.
 var items;
 var sum = 0;
 var row=0;
 
+//This function will be performed after the add items function.
+//In the add items function, the barcode, price, and name of the new item will be assigned.
+//After that, we will use those details to add the quantity to the database.
+//By this method, we can assign many quantity of many items at the same time.
 function bcsubmit() {
   var key = document.getElementById('barcode').value;
   var quantityStr = parseInt(document.getElementById('quantitys').value);
@@ -37,13 +41,20 @@ function bcsubmit() {
   	}
   });
 }
+//
 
+//Delete the chosen row by its ID on the table.
 function deleteRow(id){
   $('#bill-'+id).remove();
   row--;
   sum = 0;
 }
+//
 
+
+//Commit the process.
+//The new quantity of the new items will be saved on the database.
+//The date of the import process will also be saved for later review.
 function commit(){
   var iShop = document.getElementById("ShopID").value;
   var qListi = [];
@@ -92,7 +103,9 @@ function commit(){
   	});
 	}
 }
+//
 
+//Delete all the data in the table.
 function deleteFun(){
 	var x = document.getElementById("bill").rows.length;
     for (i=1;i<x;i++){

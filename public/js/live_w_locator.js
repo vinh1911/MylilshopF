@@ -1,5 +1,6 @@
 $(function() {
     var App = {
+		//Initiate the camera
         init: function() {
             var self = this;
 
@@ -13,9 +14,15 @@ $(function() {
                 Quagga.start();
             });
         },
+		//
+		
+		//If there is an error with, an wanrning will be shown in the console
         handleError: function(err) {
             console.log(err);
         },
+		//
+		
+		//Check the capabilities of the camera 
         checkCapabilities: function() {
             var track = Quagga.CameraAccess.getActiveTrack();
             var capabilities = {};
@@ -25,6 +32,8 @@ $(function() {
             this.applySettingsVisibility('zoom', capabilities.zoom);
             this.applySettingsVisibility('torch', capabilities.torch);
         },
+		
+		//Apply the settings to the current camera.
         applySettingsVisibility: function(setting, capability) {
             // depending on type of capability
             if (typeof capability === 'boolean') {
@@ -43,6 +52,8 @@ $(function() {
                 return;
             }
         },
+		
+		//If there are more than one camera can be operated on your device, this is the used function to select one of them. 
         initCameraSelection: function(){
             var streamLabel = Quagga.CameraAccess.getActiveStreamLabel();
 
@@ -65,7 +76,7 @@ $(function() {
             });
         },
 
-
+		//
         state: {
             inputStream: {
                 type : "LiveStream",
@@ -94,7 +105,8 @@ $(function() {
     };
 
     App.init();
-
+	
+	//Print the scan's results
     Quagga.onDetected(function(result) {
         var code = result.codeResult.code;
 		document.getElementById('barcode').value=code;
