@@ -116,21 +116,19 @@ invRef.child(key).on("value", snap => {
 			var output = parseInt($("#bill tr:eq("+count+") td:eq("+3+")").html());
 			deleteRow(count);
 			if(row === count-1){
-				$('#bill').append("<tr name="+key+" id=bill-"+count+"><td>" + name + "</td><td>"+price+"</td><td>"+ quantityStr +"</td><td>"+subtotal+"</td><td><button type='button' class='btn btn-primary btn-sm' onclick='deleteRow("+row+");'>x</button></tr>");
+				$('#bill').append("<tr name="+key+" id=bill-"+count+"><td>" + name + "</td><td>"+price+"</td><td>"+ quantityStr +"</td><td>"+subtotal+"</td><td><button type='button' class='btn btn-primary btn-sm' onclick='deleteRow("+count+");'>x</button></tr>");
 			}else{
-				$('#bill > thead > tr').eq(count-1).after("<tr name="+key+" id=bill-"+count+"><td>" + name + "</td><td>"+price+"</td><td>"+ quantityStr +"</td><td>"+subtotal+"</td><td><button type='button' class='btn btn-primary btn-sm' onclick='deleteRow("+row+");'>x</button></tr>");
+				$('#bill > thead > tr').eq(count-1).after("<tr name="+key+" id=bill-"+count+"><td>" + name + "</td><td>"+price+"</td><td>"+ quantityStr +"</td><td>"+subtotal+"</td><td><button type='button' class='btn btn-primary btn-sm' onclick='deleteRow("+count+");'>x</button></tr>");
 			}
 			row++;
 		}else{
 			alert("Error!");
 		}			
 	}
-
 });
 }
 
 function deleteRow(id){ 
-  var output = parseInt($("#bill tr:eq("+id+") td:eq("+3+")").html());
   $('#bill-'+id).remove(); 
   row--;
   sum = 0;
