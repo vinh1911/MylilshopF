@@ -152,6 +152,7 @@ function commit(){
 		sum = sum + subtotal;
 	}
 	items = x-1;
+	document.getElementById('total').innerHTML = sum;
 	alert("The total amount : " + sum +" $"+"\nThe number of sold items: " + items);
 }
 
