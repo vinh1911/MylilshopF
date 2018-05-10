@@ -105,7 +105,7 @@ invRef.child(key).on("value", snap => {
 			row++;
 			$("#bill").append("<tr name="+key+" id=bill-"+row+"><td>" + name + "</td><td>"+price+"</td><td>"+ quantityStr +"</td><td>"+subtotal+"</td><td><button type='button' class='btn btn-primary btn-sm' onclick='deleteRow("+row+");'>x</button></tr>");
 		}else{
-			alert("Error! Out of stock!");
+			alert("Error!");
 		}
 	} else {
 		var oldquantity = parseInt($("#bill tr:eq("+count+") td:eq("+2+")").html());
@@ -115,10 +115,14 @@ invRef.child(key).on("value", snap => {
 			var subtotal = price*quantityStr;
 			var output = parseInt($("#bill tr:eq("+count+") td:eq("+3+")").html());
 			deleteRow(count);
+			if(row === count-1){
+				$('#bill').append("<tr name="+key+" id=bill-"+count+"><td>" + name + "</td><td>"+price+"</td><td>"+ quantityStr +"</td><td>"+subtotal+"</td><td><button type='button' class='btn btn-primary btn-sm' onclick='deleteRow("+row+");'>x</button></tr>");
+			}else{
+				$('#bill > thead > tr').eq(count-1).after("<tr name="+key+" id=bill-"+count+"><td>" + name + "</td><td>"+price+"</td><td>"+ quantityStr +"</td><td>"+subtotal+"</td><td><button type='button' class='btn btn-primary btn-sm' onclick='deleteRow("+row+");'>x</button></tr>");
+			}
 			row++;
-			$('#bill > thead > tr').eq(count-1).after("<tr name="+key+" id=bill-"+count+"><td>" + name + "</td><td>"+price+"</td><td>"+ quantityStr +"</td><td>"+subtotal+"</td><td><button type='button' class='btn btn-primary btn-sm' onclick='deleteRow("+row+");'>x</button></tr>");
 		}else{
-			alert("Error! Out of stock!");
+			alert("Error!");
 		}			
 	}
 
@@ -138,6 +142,8 @@ function commit(){
 	var year = d.getFullYear();
 	var month = d.getMonth()+1;
 	var day = d.getDate();
+	var DateId = year*10000+month*100+day;
+	console.log(DateId);
 	var x = document.getElementById("bill").rows.length;
 	for (i = 1; i < x; i++)
 	{
