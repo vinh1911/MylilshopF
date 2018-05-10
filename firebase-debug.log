@@ -1,0 +1,82 @@
+[debug] [2018-05-09T18:34:10.527Z] ----------------------------------------------------------------------
+[debug] [2018-05-09T18:34:10.536Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-09T18:34:10.536Z] CLI Version:   3.18.4
+[debug] [2018-05-09T18:34:10.537Z] Platform:      win32
+[debug] [2018-05-09T18:34:10.537Z] Node Version:  v8.11.1
+[debug] [2018-05-09T18:34:10.540Z] Time:          Thu May 10 2018 01:34:10 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-09T18:34:10.540Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-09T18:34:10.570Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-09T18:34:10.571Z] > authorizing via signed-in user
+[debug] [2018-05-09T18:34:10.574Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-09T18:34:10.574Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/Ibh4p3gRkmalYHXEbcFGdVIokeFCGYpku8CuEgn-tx0',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu May 10 2018 01:34:10 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-09T18:34:10.884Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-09T18:34:10.899Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mylilshopf  
+  
+ Thu May 10 2018 01:34:10 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-09T18:34:11.863Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-09T18:34:11.864Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mylilshopf/tokens  
+  
+ Thu May 10 2018 01:34:11 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-09T18:34:12.829Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-09T18:34:12.831Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mylilshopf  
+  
+ Thu May 10 2018 01:34:12 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-09T18:34:13.959Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Admin\Desktop\MylilshopF'...
+[info] 
+[debug] [2018-05-09T18:34:13.966Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/28816905891/clients/_:getWebAppConfig  
+  
+ Thu May 10 2018 01:34:13 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-09T18:34:15.659Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-05-10T01:46:08.539Z] ----------------------------------------------------------------------
+[debug] [2018-05-10T01:46:08.578Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-10T01:46:08.578Z] CLI Version:   3.18.4
+[debug] [2018-05-10T01:46:08.578Z] Platform:      win32
+[debug] [2018-05-10T01:46:08.578Z] Node Version:  v8.11.1
+[debug] [2018-05-10T01:46:08.579Z] Time:          Thu May 10 2018 08:46:08 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-10T01:46:08.579Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-10T01:46:08.621Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-10T01:46:08.623Z] > authorizing via signed-in user
+[debug] [2018-05-10T01:46:08.627Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-10T01:46:08.627Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/Ibh4p3gRkmalYHXEbcFGdVIokeFCGYpku8CuEgn-tx0',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu May 10 2018 08:46:08 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-10T01:46:08.934Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-10T01:46:08.946Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mylilshopf  
+  
+ Thu May 10 2018 08:46:08 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-10T01:46:09.971Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-10T01:46:09.972Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mylilshopf/tokens  
+  
+ Thu May 10 2018 08:46:09 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-10T01:46:11.784Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-10T01:46:11.786Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mylilshopf  
+  
+ Thu May 10 2018 08:46:11 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-10T01:46:12.919Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Admin\Desktop\MylilshopF'...
+[info] 
+[debug] [2018-05-10T01:46:12.922Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/28816905891/clients/_:getWebAppConfig  
+  
+ Thu May 10 2018 08:46:12 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-05-10T01:46:13.765Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+

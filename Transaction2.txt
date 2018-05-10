@@ -1,0 +1,48 @@
+function submitClick2() {
+	//ShopId, Day, Month, Year
+	var qShop = 1; 
+	var D = 22;
+	var M = 12;
+	var Y = 1975;
+	var time = Y*10000+M*100+D
+	//Push
+	var TransRef = rootRef.ref().child("Transaction");
+	var qId=TransRef.push();
+	//Row: Number of Rows, qListi: Array item ,qLista: Array amount
+	var i;
+	var row=2;
+	var qListi = [];
+	var qLista = [];
+	
+	//Push value read into Array
+	//For loop needed
+	//for(i=0;i<row;i++){
+	//		qLista.push(...); 		... : Location in Table
+	//}
+	qListi.push("BN0001");
+	qListi.push("AA0001");
+	qLista.push(3);
+	qLista.push(22); 
+	
+	if(qShop){
+		//Transaction update
+		qId.set({	
+			Count: row,
+			Year: Y,
+			Time: time,
+			Item:{
+				
+			}
+		});
+		//Inventory update
+		for(i=0;i<=row;i++ ){
+			qId.child("Item/"+(i+1)).update({
+				Item: qListi[i],
+				Amount: qLista[i]});
+			rootRef.ref('Inventory/' + qListi[i] + '/Shop/'+qShop).transaction(function(currentValue) {
+				return (currentValue||0) + parseInt(qLista[i]); // +/- depend on manager/employee 
+			});
+		}
+	}
+	else alert("Wrong")
+}
